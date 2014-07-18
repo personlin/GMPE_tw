@@ -23,17 +23,15 @@ shinyUI(fluidPage(
       sliderInput("mag", label = h4("Magnitude (Mw)"),
                   min = 3, max = 8, value = 6.5, step=0.1),
       
-      sliderInput("rangeR", label = h4("Range of distance (km):"), min = 0, max = 400, value = c(1,150)),
-      br(),
-      actionButton("goButton", "Go!")
+      sliderInput("rangeR", label = h4("Range of distance (km):"), min = 1, max = 400, value = c(1,150)),
+      br()
     ),
 
     # Show a plot of the generated distribution
     mainPanel(
       plotOutput("plot1"),
       textOutput("text1"),
-      textOutput("text2"),
-      textOutput("text3")
+      textOutput("text2")
     )
   )
 ))
